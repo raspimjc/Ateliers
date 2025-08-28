@@ -1,0 +1,34 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="RZHQ0X2oAl-v_lsPj75w">
+    <mxGraphModel dx="264" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-1" value="&lt;b&gt;Centrale&lt;/b&gt;&lt;br&gt;&lt;div&gt;- RP2040&lt;/div&gt;&lt;div&gt;- RTC&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-2" value="&lt;b&gt;Arrosage&lt;/b&gt;&lt;div&gt;- pompe&lt;/div&gt;&lt;div&gt;- capteur humidité terre&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="240" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-3" value="&lt;b&gt;Humidité&lt;/b&gt;&lt;div&gt;- brumisateur&lt;/div&gt;&lt;div&gt;- capteur humidité ambiant&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="360" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-4" value="&lt;b&gt;Température&lt;/b&gt;&lt;div&gt;- capteur ambiant&lt;/div&gt;&lt;div&gt;- actionneur d&#39;ouverture&lt;/div&gt;&lt;div&gt;- d&#39;un ventilateur&lt;/div&gt;&lt;div&gt;- un élément chauffant&lt;/div&gt;&lt;div&gt;- un élément rafraichissant&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-5" value="&lt;b&gt;IHM Simple&lt;/b&gt;&lt;br&gt;&lt;div&gt;- Une led par fonction&lt;/div&gt;&lt;div&gt;- capteur présence&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="280" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-6" value="&lt;b&gt;IHM Complexe&lt;/b&gt;&lt;br&gt;&lt;div&gt;- Ecran&lt;/div&gt;&lt;div&gt;- boutons de navigation&lt;/div&gt;&lt;div&gt;- capteur présence&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-7" value="&lt;b&gt;Eclairage&lt;/b&gt;&lt;br&gt;&lt;div&gt;- capteur de luminosité&lt;/div&gt;&lt;div&gt;- bande led horticole&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e2dBTFM0eTt_UWIK3Lru-8" value="&lt;b&gt;Connectivité&lt;/b&gt;&lt;br&gt;&lt;div&gt;OPTIONNEL&lt;/div&gt;&lt;div&gt;- Wifi&lt;/div&gt;&lt;div&gt;- MQTT&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="160" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
