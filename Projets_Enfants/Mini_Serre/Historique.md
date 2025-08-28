@@ -21,7 +21,8 @@
 
 - Forum des associations:
 
-  - Samedi 6 Septembre 10h - 17h
+  - Dimanche 7 Septembre 10h - 16h
+  - Presence 30mn avant pour mettre en place
 
 - Liste des composants (voir fichier ods):
 
@@ -38,13 +39,16 @@
 - Propostion Seance 1 & 2 (SEPT/OCT):
   
    - Cours de Biologie
-   - Presentation des composants selon les besoin
+   - Presentation des composants selon les besoins
    - Placement/Routage au tableau
-   - Utilisation de PCB & fil à wrapper
+   - Placement/Routage réel (Utilisation de PCB & fil à wrapper)
 
 
 - A Faire:
 
   - Completer le fichier ods avec les composants et leurs references
+  - Bilan de puissance pour dimensioner l'alim
+  - Bacs, bouteilles ../..
 
 
+# 2 - Seance 11/SEPT/2025
