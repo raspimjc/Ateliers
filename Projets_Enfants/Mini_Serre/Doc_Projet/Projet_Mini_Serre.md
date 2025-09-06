@@ -26,10 +26,38 @@
 # 2 - Liste des composants
 
 <img src="./Images/Liste_des_composants.jpg" style="width:80%;">
-  
 
-<img src="./Images/pico_wifi.jpg" style="width:30%;">
-<img src="./Images/ecran_LCD.jpg" style="width:35%;">
+
+Module d'affichage numérique LED TM1637, 4 Bits, pour arduino, 7 segments, 0.36 pouces, horloge, Tube d'anode rouge, carte de pilote à quatre séries:
+https://a.aliexpress.com/_EvDb4YI
+
+Capteur numérique de température et d'humidité DHT22, Module AM2302 + PCB avec câble pour Arduino
+https://a.aliexpress.com/_EzFwt4S 
+
+Technologie d'horloge en temps réel, RTC DS1302, AVR ARM PIC SMD, Ardu37
+https://a.aliexpress.com/_EJDAHG2 
+
+4010 12025 8010 30mm dc 5V 12V 24V ventilateur de refroidissement boîtier de moteur sans brosse silencieux 40MM 50MM 60MM 70MM 80MM 90MM 120MM pour impression 3D 2PIN
+https://a.aliexpress.com/_EvwFRaO 
+
+Système d'irrigation automatique, Kit de bricolage, pompe à eau pour serre de jardin, fleur, capteur d'humidité du sol pour Arduino Nano
+https://a.aliexpress.com/_EJtVBwA 
+
+ 1 Servo étanche 20Kg 25Kg 30Kg 35Kg 40Kg, engrenage métallique, numérique, pour voitures RC à échelle 1/8 1/10
+https://a.aliexpress.com/_Ex8E5fu 
+
+Module d'atomiseur ultrasonique à pulvérisation unique DC 5V, Anti-brûlure sèche, détection anhydre, Module d'humidification de Type C
+https://a.aliexpress.com/_EzwW7l8 
+
+USB 5V LED plante poussent bande lumière spectre complet plante croissance lumière serre phytolampe pour plantes système de culture hydroponique
+https://a.aliexpress.com/_EQDOr0a 
+
+Module électroluminescent DC 3.3v-5v 10mm, capteur led, indicateur LED, module de tube électroluminescent pour arduino
+https://a.aliexpress.com/_EIYqsom 
+
+Coussin chauffant électrique en caoutchouc de Silicone, 5V 12V 24V 110V 220V, autocollant adhésif 3M, plaque chauffante, tapis, fil de sortie de renflement sportif moyen
+https://a.aliexpress.com/_EHTmJga 
+
 
 <!-- Ceci est un saut de page (exportes en HTML/PDF via wkhtmltopdf) -->
 <div style="page-break-before: always;"></div>
