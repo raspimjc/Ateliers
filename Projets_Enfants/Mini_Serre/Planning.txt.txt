@@ -1,0 +1,8 @@
+1 - SEPTEMBRE
+-------------
+
+Présentation serre
+Présentation atelier 1: La différence de potentiels
+Câblage LED + Pile
+Câblage Pico + 1 LED
+Code Thonny led_on_off
