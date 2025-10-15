@@ -6,3 +6,11 @@ Présentation atelier 1: La différence de potentiels
 Câblage LED + Pile
 Câblage Pico + 1 LED
 Code Thonny led_on_off
+
+2 - OCTOBRE
+-----------
+
+Présentation Logiciel
+Code Chenillard
+Code Capteur Temp/Hum
+
