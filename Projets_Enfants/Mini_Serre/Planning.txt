@@ -11,6 +11,4 @@ Code Thonny led_on_off
 -----------
 
 Présentation Logiciel
-Code Chenillard
-Code Capteur Temp/Hum
-
+Code Chenillard (simple, liste et dictionnaire)
