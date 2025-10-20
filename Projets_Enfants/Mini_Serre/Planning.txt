@@ -11,4 +11,10 @@ Code Thonny led_on_off
 -----------
 
 Présentation Logiciel
+Câblage Pico + 4 LEDs
 Code Chenillard (simple, liste et dictionnaire)
+
+3 - NOVEMBRE (Previsionnelle)
+-----------------------------
+
+Capteur de Température et Humidité DHT (DHT11 ou DHT22)
