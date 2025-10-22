@@ -1,8 +1,9 @@
 from machine import Pin, PWM
 from servo import Servo
 import time
+from constantes_laurence import *
 
-moteur_milieu=Servo(pin=12) 
+moteur_milieu=Servo(pin=PIN_SERVO) 
 
 moteur_milieu_min = 90
 moteur_milieu_max = 180

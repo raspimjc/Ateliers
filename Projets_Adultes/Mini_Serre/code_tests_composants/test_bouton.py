@@ -1,8 +1,9 @@
 from machine import Pin
 import time
+from constantes_laurence import *
 
-bouton = Pin(0, Pin.IN, Pin.PULL_UP) # BP1
-#bouton = Pin(1, Pin.IN, Pin.PULL_UP) # BP2
+bouton = Pin(PIN_BP1, Pin.IN, Pin.PULL_UP) # BP1
+#bouton = Pin(PIN_BP2, Pin.IN, Pin.PULL_UP) # BP2
 
 date_dernier_appui = time.ticks_ms()
 bouton_actif = False
@@ -31,6 +32,7 @@ def test_bouton():
         bouton_actif = False    
 
 if __name__ == '__main__':
+    print("En attente d'un appui sur le BP")
     while True:
         test_bouton()
 

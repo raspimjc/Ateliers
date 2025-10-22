@@ -1,9 +1,9 @@
 from machine import Pin
 from time import sleep
 import dht
+from constantes_laurence import *
 
-
-DHT11 = dht.DHT11(Pin(22)) 
+DHT11 = dht.DHT11(Pin(PIN_DHT)) 
 
 def test_dht(capteur):
     sleep(1)

@@ -1,10 +1,10 @@
 from machine import Pin, I2C
 import time
 from ds3231 import DS3231
+from constantes_laurence import *
 
 # --- Configuration I2C ---
-#i2c = I2C(0, sda=Pin(20), scl=Pin(21), freq=400000)
-i2c = I2C(0, sda=Pin(0), scl=Pin(1), freq=400000)
+i2c = I2C(I2C_RTC, sda=Pin(PIN_RTC_SDA), scl=Pin(PIN_RTC_SCL), freq=400000)
 addr = i2c.scan()[0]
 print(hex(addr))
 

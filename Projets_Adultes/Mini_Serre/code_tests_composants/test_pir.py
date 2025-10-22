@@ -1,8 +1,9 @@
 from machine import Pin
 import time
+from constantes_laurence import *
 
 # declaration du detecteur infra rouge
-pir_sensor = Pin(18, Pin.IN)
+pir_sensor = Pin(PIN_PIR, Pin.IN)
 
 def test_pir(pir):
     time.sleep(1)

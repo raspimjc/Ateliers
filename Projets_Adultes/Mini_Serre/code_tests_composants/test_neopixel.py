@@ -1,10 +1,10 @@
 from neopixel import Neopixel
 import time
+from constantes_laurence import *
 
 # declaration du ruban de leds 
-NUM_LED = 30 #Nbre de leds
-PIN_NB  = 13 #Pin
-neo = Neopixel(NUM_LED, 0, PIN_NB, "GRB")
+NUM_LED = 8 #Nbre de leds
+neo = Neopixel(NUM_LED, 0, PIN_NEO, "GRB")
 
 # on definit la luminosite des leds / 255
 neo.brightness(15)

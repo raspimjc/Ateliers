@@ -1,8 +1,9 @@
 from machine import Pin, I2C
 from time import sleep
 from machine_i2c_lcd import I2cLcd
+from constantes_laurence import *
 
-i2c = I2C(1, scl=Pin(15), sda=Pin(14), freq=400000)
+i2c = I2C(I2C_LCD, scl=Pin(PIN_LCD_SCL), sda=Pin(PIN_LCD_SDA), freq=400000)
 
 addr = i2c.scan()[0]
 #print(hex(addr))

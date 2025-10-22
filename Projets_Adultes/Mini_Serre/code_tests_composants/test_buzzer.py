@@ -1,6 +1,7 @@
 from machine import Pin
 from buzzer import Buzzer
 from time import sleep
+from constantes_laurence import *
 
 # frequences des notes
 freq_notes = {"do":1046,"do_":1109,
@@ -30,7 +31,7 @@ notes = [("mi",0.25),("mi",0.25),("mi",0.5),
          ("do",1)]
 
 # declaration du buzzer (Alimentation en 3.3V pour celui de la MJC, sinon il se bloque)
-buz = Buzzer(21)
+buz = Buzzer(PIN_BUZ)
 buz.stop()
 
 # fonction qui va jouer une note

@@ -1,6 +1,7 @@
 from machine import Pin
 from ir_rx_nec import NEC_16
 import time
+from constantes_laurence import *
 
 #Declaration et initialisation de variables internes
 data_received = False
@@ -13,7 +14,7 @@ def callback(data, addr, ctrl):
         IR_data = data
         data_received = True
         
-ir = NEC_16(Pin(20, Pin.IN), callback)
+ir = NEC_16(Pin(PIN_IR, Pin.IN), callback)
 
 def test_telecommande():
     global data_received, IR_data
