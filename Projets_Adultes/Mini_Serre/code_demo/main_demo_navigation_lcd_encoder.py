@@ -37,7 +37,7 @@ def afficher_menu():
     if index + 1 < len(menu_items):
         lcd_message("  " + menu_items[index + 1], 1)
 
-# === Fonctions
+# === Fonctions ===
 def execute_mode():
     global index
     if index == 0:
@@ -62,6 +62,7 @@ def execute_mode():
         sleep(2)
     else:
         afficher_menu()
+        
     afficher_menu()
 
 # === Démarrage ===
