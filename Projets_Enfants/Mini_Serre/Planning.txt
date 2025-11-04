@@ -18,3 +18,8 @@ Code Chenillard (simple, liste et dictionnaire)
 -----------------------------
 
 Capteur de Température et Humidité DHT (DHT11 ou DHT22)
+
+4 - DECEMBRE (Previsionnelle)
+-----------------------------
+
+Sapin de Noel (PIR + Ruban Neopixel)
