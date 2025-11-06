@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "author": "chenapan s",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -51.15,
+      "left": -73.2,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -95.7, "left": 90.6, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 355.4, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 170.8, "left": -67.2, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay2", "top": 288.2, "left": -67.2, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 307.2,
+      "left": 67.2,
+      "attrs": { "text": "Ventilateur" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 374.4,
+      "left": 67.2,
+      "attrs": { "text": "Chauffage" }
+    },
+    { "type": "wokwi-text", "id": "text3", "top": 393.6, "left": -96, "attrs": { "text": "GP6" } },
+    { "type": "wokwi-text", "id": "text4", "top": 326.4, "left": -96, "attrs": { "text": "GP7" } },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": 240,
+      "left": -105.6,
+      "attrs": { "text": "GP12" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 67.2, "left": 124.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 134.4, "left": 57, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 422.4, "left": -125.4, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -85.64, "left": 48, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc2", "top": 163.96, "left": -86.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -51.6,
+      "left": -207.4,
+      "attrs": { "color": "purple" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -15.25,
+      "left": -172.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP7", "relay2:IN", "green", [ "h-67.2", "v278.4", "h19.2" ] ],
+    [ "pico:GP6", "relay1:IN", "green", [ "h-86.4", "v326.4", "h0", "v28.8" ] ],
+    [ "pico:GP12", "servo1:PWM", "green", [ "h-28.8", "v124.8" ] ],
+    [ "pico:GP22", "dht1:SDA", "green", [ "h116.4", "v-48" ] ],
+    [ "dht1:GND", "gnd1:GND", "black", [ "v0" ] ],
+    [ "pico:GND.5", "gnd2:GND", "black", [ "h0" ] ],
+    [ "relay1:GND", "gnd3:GND", "black", [ "h0" ] ],
+    [ "relay2:GND", "gnd3:GND", "black", [ "h0" ] ],
+    [ "servo1:GND", "gnd3:GND", "black", [ "h0" ] ],
+    [ "pico:3V3", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "dht1:VCC", "vcc1:VCC", "red", [ "v19.2", "h-57.6" ] ],
+    [ "servo1:V+", "vcc2:VCC", "red", [ "h0" ] ],
+    [ "relay2:VCC", "vcc2:VCC", "red", [ "h0" ] ],
+    [ "relay1:VCC", "vcc2:VCC", "red", [ "h0" ] ],
+    [ "pico:GP2", "r1:2", "green", [ "h0" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
