@@ -1,7 +1,7 @@
 from machine import Pin
 from ir_rx_nec import NEC_16
 import time
-from constantes_laurence import *
+from constantes import *
 
 #Declaration et initialisation de variables internes
 data_received = False

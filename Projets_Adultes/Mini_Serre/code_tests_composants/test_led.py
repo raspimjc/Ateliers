@@ -1,6 +1,6 @@
 import time
 from machine import Pin
-from constantes_laurence import *
+from constantes import *
 
 #LED = Pin("LED", Pin.OUT) # LED integree a la board 
 #LED = Pin(25, Pin.OUT) # LED integree a la board pour le pico (sauf wifi)

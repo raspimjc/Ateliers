@@ -1,6 +1,6 @@
 import time
 from machine import Pin
-from constantes_laurence import *
+from constantes import *
 
 RELAIS = Pin(PIN_RELAIS, Pin.OUT) 
 

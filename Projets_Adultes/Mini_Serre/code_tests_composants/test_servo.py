@@ -1,7 +1,7 @@
 from machine import Pin, PWM
 from servo import Servo
 import time
-from constantes_laurence import *
+from constantes import *
 
 moteur_milieu=Servo(pin=PIN_SERVO) 
 

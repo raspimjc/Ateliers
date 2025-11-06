@@ -1,7 +1,7 @@
 from machine import Pin, PWM
 from rotary_irq_rp2 import RotaryIRQ
 import time
-from constantes_laurence import *
+from constantes import *
 
 #Declaration de l'encoder
 ENCODER = RotaryIRQ(pin_num_clk=PIN_ENC_CLK,pin_num_dt=PIN_ENC_DT,reverse=False,

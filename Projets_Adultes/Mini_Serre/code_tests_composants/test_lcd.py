@@ -1,7 +1,7 @@
 from machine import Pin, I2C
 from time import sleep
 from machine_i2c_lcd import I2cLcd
-from constantes_laurence import *
+from constantes import *
 
 i2c = I2C(I2C_LCD, scl=Pin(PIN_LCD_SCL), sda=Pin(PIN_LCD_SDA), freq=400000)
 

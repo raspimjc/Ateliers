@@ -5,9 +5,9 @@ PIN_BP2 = 11  #BP 2
 #PIN_BP1 = 12  #BP 3
 #PIN_BP2 = 13  #BP 4
 
-PIN_BUZ = 14  #Buzzer
+PIN_BUZ = 22  #Buzzer
 
-PIN_DHT = 22 #Capteur Temp & Hum
+PIN_DHT = 2 #Capteur Temp & Hum
 
 PIN_ENC_CLK = 6 #Encoder Clk
 PIN_ENC_DT  = 7 #Encoder DT
@@ -21,16 +21,16 @@ PIN_LCD_SDA = 4 #Ecran LCD I2C SDA
 PIN_LCD_SCL = 5 #Ecran LCD I2C SCL
 I2C_LCD = 0     #Ecran LCD I2C NB
 
-#PIN_LED1 = 6
-#PIN_LED2 = 7
-#PIN_LED3 = 8
+#PIN_LED1 = 0
+#PIN_LED2 = 1
+#PIN_LED3 = 14
 #PIN_LED4 = 9
 
 PIN_NEO = 18 #Ruban Neopixel
 
 PIN_PIR = 15 #Capteur de présence InfraRouge
 
-#PIN_IR = 3 #Telecommande InfraRouge
+PIN_IR = 3 #Telecommande InfraRouge
 
 #PIN_SERVO = 13 #Servo Moteur
 

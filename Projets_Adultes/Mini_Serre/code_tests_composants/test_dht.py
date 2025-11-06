@@ -1,13 +1,14 @@
 from machine import Pin
 from time import sleep
 import dht
-from constantes_laurence import *
+from constantes import *
 
-DHT11 = dht.DHT11(Pin(PIN_DHT)) 
+#DHT = dht.DHT11(Pin(PIN_DHT)) 
+DHT = dht.DHT22(Pin(0)) 
 
 def test_dht(capteur):
     sleep(1)
-    # Le DHT11 renvoie au maximum une mesure toute les 1s
+    # Le DHT renvoie au maximum une mesure toute les 1s
     capteur.measure()
     # Récupère les mesures du capteur
     print(f"Temperature : {capteur.temperature():.1f}")
@@ -16,7 +17,7 @@ def test_dht(capteur):
     
 if __name__ == '__main__':
     while True:
-        test_dht(DHT11)
+        test_dht(DHT)
 
 
 

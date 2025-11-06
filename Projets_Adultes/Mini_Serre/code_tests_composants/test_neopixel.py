@@ -1,6 +1,6 @@
 from neopixel import Neopixel
 import time
-from constantes_laurence import *
+from constantes import *
 
 # declaration du ruban de leds 
 NUM_LED = 8 #Nbre de leds

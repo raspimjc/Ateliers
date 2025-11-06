@@ -1,7 +1,7 @@
 from machine import Pin
 from buzzer import Buzzer
 from time import sleep
-from constantes_laurence import *
+from constantes import *
 
 # frequences des notes
 freq_notes = {"do":1046,"do_":1109,

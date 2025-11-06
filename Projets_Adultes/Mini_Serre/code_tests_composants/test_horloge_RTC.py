@@ -1,7 +1,7 @@
 from machine import Pin, I2C
 import time
 from ds3231 import DS3231
-from constantes_laurence import *
+from constantes import *
 
 # --- Configuration I2C ---
 i2c = I2C(I2C_RTC, sda=Pin(PIN_RTC_SDA), scl=Pin(PIN_RTC_SCL), freq=400000)

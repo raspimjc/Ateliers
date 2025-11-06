@@ -1,6 +1,6 @@
 from machine import Pin
 import time
-from constantes_laurence import *
+from constantes import *
 
 bouton = Pin(PIN_BP1, Pin.IN, Pin.PULL_UP) # BP1
 #bouton = Pin(PIN_BP2, Pin.IN, Pin.PULL_UP) # BP2
