@@ -31,3 +31,8 @@ PIN_PIR = 18 #Capteur de présence InfraRouge
 PIN_IR = 20 #Telecommande InfraRouge ou Encoder SW BP
 
 PIN_SERVO = 12 #Servo Moteur
+
+PIN_RELAIS = 6 #Relais 1
+#PIN_RELAIS = 7 #Relais 2
+#PIN_RELAIS = 8 #Relais 3
+#PIN_RELAIS = 9 #Relais 4

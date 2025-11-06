@@ -31,3 +31,6 @@ PIN_PIR = 16 #Capteur de présence InfraRouge
 PIN_IR = 3 #Telecommande InfraRouge
 
 PIN_SERVO = 13 #Servo Moteur
+
+PIN_RELAIS = 0 #Temp
+

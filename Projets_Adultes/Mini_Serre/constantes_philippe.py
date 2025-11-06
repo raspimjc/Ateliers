@@ -33,3 +33,8 @@ PIN_PIR = 15 #Capteur de présence InfraRouge
 #PIN_IR = 3 #Telecommande InfraRouge
 
 #PIN_SERVO = 13 #Servo Moteur
+
+#PIN_RELAIS = 6 #Relais 1
+#PIN_RELAIS = 7 #Relais 2
+#PIN_RELAIS = 8 #Relais 3
+#PIN_RELAIS = 9 #Relais 4
