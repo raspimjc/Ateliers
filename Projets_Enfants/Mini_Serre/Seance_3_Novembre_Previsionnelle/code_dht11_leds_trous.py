@@ -1,5 +1,5 @@
 from machine import xxxxxxxxx
-from time import xxxxxxxxxxxxx
+from time import sleep
 import dht
 
 #Declaration du capteur
