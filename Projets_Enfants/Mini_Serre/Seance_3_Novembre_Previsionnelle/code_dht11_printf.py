@@ -3,7 +3,7 @@ from time import sleep
 import dht
 
 
-DHT11 = dht.DHT11(Pin(22)) 
+DHT11 = dht.DHT11(Pin(xxxxxx)) 
     
 while True:
     DHT11.measure()
