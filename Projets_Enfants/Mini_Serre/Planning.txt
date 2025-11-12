@@ -14,29 +14,27 @@ Présentation Logiciel
 Câblage Pico + 4 LEDs
 Code Chenillard (simple, liste et dictionnaire)
 
-3 - NOVEMBRE (Previsionnelle)
------------------------------
+3 - NOVEMBRE 
+-------------
 
-Capteur de Température et Humidité DHT11 et DHT22
-- Présentation DHT & Neopixel
-- Câblage et code de lecture des capteurs (print console)
+Capteur de Température et Humidité DHT11 et DHT22:
+- Présentation DHT 
+- Câblage et code de lecture des capteurs (Affichage de la valeur sur la console)
 - Câblage 4 Leds et code (à trous) affichage température sur 4 Leds
-- Câblage ruban Neopixel et code (à trous) affichage température sur ruban (fill)
+
+Encodeur KY40:
+- Présentation de l'encodeur
+- Câblage de l'encodeur avec les 4 leds précédentes
 
 
 4 - DECEMBRE (Previsionnelle)
 -----------------------------
 
-Sapin de Noel (PIR + Ruban Neopixel)
-- Presentation PIR
-- Code du PIR
-- Code avancé Neopixel (set pixels, gradient, rotate….)
-- Code sapin de Noel (detection présence PIR => éclairage du sapin)
-
-5 - JANVIER (Previsionnelle)
------------------------------
-
-
+Sapin de Noel 
+- Présentation PIR + Ruban Neopixel
+- Câblage 
+- Code Neopixel (fill, set pixels, gradient, rotate….)
+- Code "sapin de Noel" (detection présence PIR => éclairage du sapin)
 
 
 A VENIR:
