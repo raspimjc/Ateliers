@@ -7,9 +7,9 @@ DHT11 = dht.DHT11(Pin(xxxxxxx))
 
 #Declaration des leds Pin
 led_0 = Pin(xxxx, Pin.OUT)
-led_1 = Pin(xxxxxxxx)
-led_2 = Pin(xxxxxxxx)
-led_3 = Pin(xxxxxxxx)
+led_1 = Pin(xxxx, xxxxxxx)
+led_2 = Pin(xxxx, xxxxxxx)
+led_3 = Pin(xxxx, xxxxxxx)
 
 #Declaration des leds sous forme de liste
 LEDS = [xxxx, xxxxx, xxxxx, xxxxxxx]

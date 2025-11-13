@@ -22,11 +22,6 @@ Capteur de Température et Humidité DHT11 et DHT22:
 - Câblage et code de lecture des capteurs (Affichage de la valeur sur la console)
 - Câblage 4 Leds et code (à trous) affichage température sur 4 Leds
 
-Encodeur KY40:
-- Présentation de l'encodeur
-- Câblage de l'encodeur avec les 4 leds précédentes
-
-
 4 - DECEMBRE (Previsionnelle)
 -----------------------------
 
@@ -39,6 +34,7 @@ Sapin de Noel
 
 A VENIR:
 --------
+- Encodeur KY40
 - Buzzer
 - Ecran LCD
 - Boutons et interruptions
