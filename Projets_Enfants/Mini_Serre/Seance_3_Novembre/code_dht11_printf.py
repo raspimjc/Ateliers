@@ -3,12 +3,13 @@ from time import sleep
 import dht
 
 
-DHT11 = dht.DHT11(Pin(xxxxxx)) 
+DHT = dht.DHT11(Pin(xxxxxx)) 
+#DHT = dht.DHT22(Pin(xxxxxx)) 
     
 while True:
-    DHT11.measure()
-    print(f"Temperature : {DHT11.temperature():.1f}")
-    print(f"Humidite    : {DHT11.humidity():.1f}")
+    DHT.measure()
+    print(f"Temperature : {DHT.temperature():.1f}")
+    print(f"Humidite    : {DHT.humidity():.1f}")
     sleep(1)
 
 

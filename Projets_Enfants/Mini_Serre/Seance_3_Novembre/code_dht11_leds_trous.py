@@ -3,7 +3,8 @@ from time import sleep
 import dht
 
 #Declaration du capteur
-DHT11 = dht.DHT11(Pin(xxxxxxx))       
+DHT = dht.DHT11(Pin(xxxxxxx))       
+#DHT = dht.DHT22(Pin(xxxxxxx))     
 
 #Declaration des leds Pin
 led_0 = Pin(xxxx, Pin.OUT)
@@ -22,9 +23,9 @@ for item in LEDS:
 # --- Boucle principale ---
 while True:
     #On lit le capteur
-    DHT11.measure()
-    temp = DHT11.temperature()
-    hum = DHT11.humidity()
+    DHT.measure()
+    temp = DHT.temperature()
+    hum = DHT.humidity()
     #On affiche sur la console pour vérifier la valeur
     print("Température:", temp, "°C  |  Humidité:", hum, "%")
 
