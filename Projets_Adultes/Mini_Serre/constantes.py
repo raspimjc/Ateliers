@@ -36,3 +36,5 @@ PIN_RELAIS = 6 #Relais 1
 #PIN_RELAIS = 7 #Relais 2
 #PIN_RELAIS = 8 #Relais 3
 #PIN_RELAIS = 9 #Relais 4
+
+PIN_LDR = 26 #Servo Moteur
