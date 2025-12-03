@@ -1,14 +1,23 @@
 #=====================================================
-# Detection simple d'une presence par PIR ou LDR
+# Detection simple d'une presence
+# par un capteur TOR (Tout ou Rien)
 # Affichage sur la console
 #=====================================================
 from machine import Pin
 from time import sleep
 
 
-# declaration du capteur
-capteur = Pin(13, Pin.IN)
-valeur_detection = 0 # 1 pour le PIR, 0 pour la LDR
+#declaration du capteur PIR
+#capteur = Pin(13, Pin.IN, Pin.PULL_UP)
+#valeur_detection = 1
+
+#declaration du capteur LDR
+capteur = Pin(14, Pin.IN, Pin.PULL_DOWN)
+valeur_detection = 0
+
+#declaration du capteur SON
+#capteur = Pin(15, Pin.IN, Pin.PULL_UP)
+#valeur_detection = 1
 
 while True:
     valeur_lue = capteur.value()
@@ -19,9 +28,9 @@ while True:
     #sinon
     else:
         print("Rien a signaler")
-    #on attends 1 seconde avant de relire
         
-    sleep(1)
+    #on attends avant de relire        
+    sleep(0.01)
 
     
    
