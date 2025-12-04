@@ -8,12 +8,12 @@ from time import sleep
 
 
 #declaration du capteur PIR
-#capteur = Pin(13, Pin.IN, Pin.PULL_UP)
-#valeur_detection = 1
+capteur = Pin(13, Pin.IN, Pin.PULL_UP)
+valeur_detection = 1
 
 #declaration du capteur LDR
-capteur = Pin(14, Pin.IN, Pin.PULL_DOWN)
-valeur_detection = 0
+#capteur = Pin(14, Pin.IN, Pin.PULL_DOWN)
+#valeur_detection = 0
 
 #declaration du capteur SON
 #capteur = Pin(15, Pin.IN, Pin.PULL_UP)
@@ -25,6 +25,7 @@ while True:
     #si quelquechose a ete detecte
     if valeur_lue == valeur_detection:
         print("Presence detectée")
+        
     #sinon
     else:
         print("Rien a signaler")
