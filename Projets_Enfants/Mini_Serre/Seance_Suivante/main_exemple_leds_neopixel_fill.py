@@ -19,11 +19,11 @@ while True:
     leds.fill((255,0,0))
     leds.show()
     time.sleep(1)
-    # on allume toutes les leds du sapin en rouge pendant 1 sec
+    # on allume toutes les leds du sapin en vert pendant 1 sec
     leds.fill((0,255,0))
     leds.show()
     time.sleep(1)
-    # on allume toutes les leds du sapin en rouge pendant 1 sec
+    # on allume toutes les leds du sapin en bleu pendant 1 sec
     leds.fill((0,0,255))
     leds.show()
     time.sleep(1)    

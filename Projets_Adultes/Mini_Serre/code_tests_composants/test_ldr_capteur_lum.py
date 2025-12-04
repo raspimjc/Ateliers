@@ -3,10 +3,10 @@ from time import sleep
 from constantes import *
 
 
-LDR = Pin(PIN_LDR, Pin.IN)
+LDR = Pin(PIN_LDR, Pin.IN,Pin.PULL_DOWN)
 
 def test_ldr(ldr):
-    sleep(1)
+    sleep(0.1)
     # Lecture du capteur
     value = ldr.value()
     # Récupère les mesures du capteur
