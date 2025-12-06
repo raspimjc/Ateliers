@@ -8,15 +8,15 @@ from time import sleep
 
 
 #declaration du capteur PIR
-capteur = Pin(13, Pin.IN, Pin.PULL_UP)
+capteur = Pin(13, Pin.IN)
 valeur_detection = 1
 
 #declaration du capteur LDR
-#capteur = Pin(14, Pin.IN, Pin.PULL_DOWN)
+#capteur = Pin(14, Pin.IN)
 #valeur_detection = 0
 
 #declaration du capteur SON
-#capteur = Pin(15, Pin.IN, Pin.PULL_UP)
+#capteur = Pin(15, Pin.IN)
 #valeur_detection = 1
 
 while True:

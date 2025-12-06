@@ -3,7 +3,7 @@ from neopixel import Neopixel
 from time import sleep
 
 #declaration du capteur PIR
-capteur = Pin(13, Pin.IN, Pin.PULL_UP)
+capteur = Pin(13, Pin.IN)
 valeur_detection = 1
 
 # declaration du ruban de leds
