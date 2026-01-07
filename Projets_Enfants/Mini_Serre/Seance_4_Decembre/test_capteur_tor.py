@@ -6,19 +6,19 @@
 from machine import Pin
 from time import sleep
 
-'''
+
 #declaration du capteur PIR
 capteur = Pin(13, Pin.IN)
 valeur_detection = 1
-
+'''
 #declaration du capteur LDR
 capteur = Pin(14, Pin.IN)
 valeur_detection = 0
-'''
+
 #declaration du capteur SON
 capteur = Pin(15, Pin.IN)
 valeur_detection = 1
-
+'''
 while True:
     valeur_lue = capteur.value()
     
