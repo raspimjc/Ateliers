@@ -74,7 +74,7 @@
       "top": 67.1,
       "left": 281.9,
       "rotate": 90,
-      "attrs": { "color": "green", "xray": "1" }
+      "attrs": { "color": "blue", "xray": "1" }
     },
     { "type": "wokwi-dht22", "id": "dht1", "top": -201.3, "left": -63, "attrs": {} },
     { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -178.4, "left": 2.22, "attrs": {} },
@@ -100,6 +100,22 @@
       "top": 188.8,
       "left": 130.4,
       "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 67.1,
+      "left": 329.9,
+      "rotate": 90,
+      "attrs": { "color": "red", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 67.1,
+      "left": 377.9,
+      "rotate": 90,
+      "attrs": { "color": "yellow", "xray": "1" }
     }
   ],
   "connections": [
@@ -153,6 +169,13 @@
     [ "servo1:PWM", "pico:GP12", "cyan", [ "h0" ] ],
     [ "lcd1:SDA", "pico:GP14", "cyan", [ "h-105.6", "v-124.6" ] ],
     [ "lcd1:SCL", "pico:GP15", "magenta", [ "h0" ] ],
+    [ "lcd1:GND", "bb1:bn.22", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "bb1:bp.21", "red", [ "h0" ] ],
+    [ "grb1:VSS", "bb1:bn.14", "black", [ "v-0.9", "h9.6" ] ],
+    [ "bb1:tn.45", "btn3:1.l", "black", [ "v0" ] ],
+    [ "btn4:1.l", "bb1:tn.48", "black", [ "v0" ] ],
+    [ "bb1:47t.c", "bb1:46t.c", "green", [ "v0" ] ],
+    [ "btn3:2.l", "pico:GP11", "magenta", [ "v134.4", "h-365" ] ],
     [ "pico:GP0", "bb1:1b.h", "", [ "$bb" ] ],
     [ "pico:GP1", "bb1:2b.h", "", [ "$bb" ] ],
     [ "pico:GND.1", "bb1:3b.h", "", [ "$bb" ] ],
@@ -217,9 +240,15 @@
     [ "btn2:2.l", "bb1:48t.d", "", [ "$bb" ] ],
     [ "btn2:1.r", "bb1:50b.i", "", [ "$bb" ] ],
     [ "btn2:2.r", "bb1:48b.i", "", [ "$bb" ] ],
-    [ "lcd1:GND", "bb1:bn.22", "black", [ "h0" ] ],
-    [ "lcd1:VCC", "bb1:bp.21", "red", [ "h0" ] ],
-    [ "grb1:VSS", "bb1:bn.14", "black", [ "v-0.9", "h9.6" ] ]
+    [ "btn3:1.l", "bb1:55t.d", "", [ "$bb" ] ],
+    [ "btn3:2.l", "bb1:53t.d", "", [ "$bb" ] ],
+    [ "btn3:1.r", "bb1:55b.i", "", [ "$bb" ] ],
+    [ "btn3:2.r", "bb1:53b.i", "", [ "$bb" ] ],
+    [ "btn4:1.l", "bb1:60t.d", "", [ "$bb" ] ],
+    [ "btn4:2.l", "bb1:58t.d", "", [ "$bb" ] ],
+    [ "btn4:1.r", "bb1:60b.i", "", [ "$bb" ] ],
+    [ "btn4:2.r", "bb1:58b.i", "", [ "$bb" ] ],
+    [ "btn4:2.l", "pico:GP27", "yellow", [ "v-48", "h-470.6" ] ]
   ],
   "dependencies": {}
 }

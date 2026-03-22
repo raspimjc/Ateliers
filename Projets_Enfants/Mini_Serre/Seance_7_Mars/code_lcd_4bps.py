@@ -1,29 +1,31 @@
-#L’objectif est de rentrer sur la console de Thonny
-#4 messages de max 16 caractères au choix du programmeur,
-#puis le programme affiche « prêt » sur l’afficheur lcd
-#et suivant l’appui du bouton, on a le message correspondant
-#sur l’afficheur.
-
-from machine import I2C, Pin
+from machine import Pin, I2C
+from machine_i2c_lcd import I2cLcd
+from time import sleep
 import time
 from quant_debounce_bp import Quant_Debounce_Bp
-from lcd1602_i2c import*
+
+# --- Declaration de l'ecran LCD ---
+i2c = I2C(1, scl=Pin(15), sda=Pin(14), freq=400000)
+addr = i2c.scan()[0]
+print(hex(addr))
+lcd = I2cLcd(i2c, addr, 2, 16)
+
 # --- Lecture des messages dans la console ---
 print("Attention mettre le curseur dans la console avant de taper les messages")
 msg1 = input("Message 1 (ligne 1) : ")
 msg2 = input("Message 2 (ligne 2) : ")
 msg3 = input("Message 3 (ligne 1) : ")
 msg4 = input("Message 4 (ligne 2) : ")
-# --- LCD ---
-i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=400000)
-lcd = I2cLcd(i2c, DEFAULT_I2C_ADDR, 2, 16)
+
 # --- Boutons ---
-bp1 = Quant_Debounce_Bp(16, "bp1")
-bp2 = Quant_Debounce_Bp(17, "bp2")
-bp3 = Quant_Debounce_Bp(18, "bp3")
-bp4 = Quant_Debounce_Bp(19, "bp4")
+bp1 = Quant_Debounce_Bp(0, "bp1")
+bp2 = Quant_Debounce_Bp(1, "bp2")
+bp3 = Quant_Debounce_Bp(11, "bp3")
+bp4 = Quant_Debounce_Bp(27, "bp4")
+
 lcd.clear()
 lcd.putstr("Pret...")
+
 # --- Boucle principale ---
 while True:
     if bp1.get_state() == "bp1":
