@@ -15,7 +15,7 @@ class Quant_Debounce_Bp:
         self.pin = Pin(pin_no, Pin.IN, Pin.PULL_UP)
         self.state = BtnState.RELEASED
         self.timer = Timer(-1)
-        self.bp = "relacher"
+        self.bp = None
 
         self.pin.irq(trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING,
                      handler=self._irq_handler)
@@ -37,10 +37,9 @@ class Quant_Debounce_Bp:
             self._on_released()
 
     def _on_pressed(self):
-        self.bp = "appuyer"
+        self.bp = self.name
 
     def _on_released(self):
-        self.bp = "relacher"
         pass
 
     def get_state(self):
