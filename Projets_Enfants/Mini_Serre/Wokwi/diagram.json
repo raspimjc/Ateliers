@@ -76,21 +76,27 @@
       "rotate": 90,
       "attrs": { "color": "blue", "xray": "1" }
     },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -201.3, "left": -63, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -201.3,
+      "left": -63,
+      "attrs": { "humidity": "2.5" }
+    },
     { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -178.4, "left": 2.22, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "grb", "top": 207.7, "left": -39.4, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb1", "top": 207.7, "left": -68.2, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb2", "top": 207.7, "left": -97, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb3", "top": 207.7, "left": -125.8, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb4", "top": 207.7, "left": -154.6, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb5", "top": 207.7, "left": -183.4, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "grb1", "top": 207.7, "left": -10.6, "attrs": {} },
-    { "type": "wokwi-neopixel", "id": "rgb6", "top": 207.7, "left": -212.2, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "grb", "top": 207.7, "left": -154.6, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb1", "top": 207.7, "left": -183.4, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb2", "top": 207.7, "left": -212.2, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb3", "top": 207.7, "left": -241, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb4", "top": 207.7, "left": -269.8, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb5", "top": 207.7, "left": -298.6, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "grb1", "top": 207.7, "left": -125.8, "attrs": {} },
+    { "type": "wokwi-neopixel", "id": "rgb6", "top": 207.7, "left": -327.4, "attrs": {} },
     {
       "type": "wokwi-servo",
       "id": "servo1",
-      "top": 227.6,
-      "left": -170,
+      "top": 237.2,
+      "left": -304.4,
       "rotate": 180,
       "attrs": {}
     },
@@ -116,6 +122,59 @@
       "left": 377.9,
       "rotate": 90,
       "attrs": { "color": "yellow", "xray": "1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 489.6,
+      "left": -28.8,
+      "attrs": { "text": "Relais 2\nBrumisateur\n" }
+    },
+    { "type": "wokwi-logo", "id": "logo1", "top": -192, "left": -278.4, "attrs": {} },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 390.2,
+      "left": -122,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay2",
+      "top": 390.2,
+      "left": -64.4,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": 489.6,
+      "left": -105.6,
+      "attrs": { "text": "Relais 1\nPompe\nArrosage" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -211.2,
+      "left": 28.8,
+      "attrs": { "text": "PIR" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay3",
+      "top": 390.2,
+      "left": 22,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": 489.6,
+      "left": 67.2,
+      "attrs": { "text": "Relais 4\nVentilateur\n" }
     }
   ],
   "connections": [
@@ -163,7 +222,6 @@
     [ "rgb3:VDD", "rgb4:VDD", "red", [ "h0" ] ],
     [ "rgb4:VDD", "rgb5:VDD", "red", [ "h0" ] ],
     [ "rgb5:VDD", "rgb6:VDD", "red", [ "h0" ] ],
-    [ "grb1:VDD", "bb1:bp.11", "red", [ "h0" ] ],
     [ "servo1:GND", "bb1:bn.17", "black", [ "h0" ] ],
     [ "servo1:V+", "bb1:bp.16", "red", [ "h0" ] ],
     [ "servo1:PWM", "pico:GP12", "cyan", [ "h0" ] ],
@@ -171,11 +229,19 @@
     [ "lcd1:SCL", "pico:GP15", "magenta", [ "h0" ] ],
     [ "lcd1:GND", "bb1:bn.22", "black", [ "h0" ] ],
     [ "lcd1:VCC", "bb1:bp.21", "red", [ "h0" ] ],
-    [ "grb1:VSS", "bb1:bn.14", "black", [ "v-0.9", "h9.6" ] ],
     [ "bb1:tn.45", "btn3:1.l", "black", [ "v0" ] ],
     [ "btn4:1.l", "bb1:tn.48", "black", [ "v0" ] ],
     [ "bb1:47t.c", "bb1:46t.c", "green", [ "v0" ] ],
     [ "btn3:2.l", "pico:GP11", "magenta", [ "v134.4", "h-365" ] ],
+    [ "btn4:2.l", "pico:GP27", "yellow", [ "v-48", "h-470.6" ] ],
+    [ "pico:GP6", "relay1:IN", "green", [ "v240" ] ],
+    [ "pico:GP7", "relay2:IN", "green", [ "v134.4", "h57.4" ] ],
+    [ "relay1:GND", "bb1:bn.7", "black", [ "v0" ] ],
+    [ "relay2:GND", "bb1:bn.12", "black", [ "v0" ] ],
+    [ "relay1:VCC", "bb1:bp.8", "red", [ "v0" ] ],
+    [ "relay2:VCC", "bb1:bp.13", "red", [ "v0" ] ],
+    [ "grb1:VDD", "bb1:bp.2", "red", [ "h0" ] ],
+    [ "grb1:VSS", "bb1:bn.3", "black", [ "v0" ] ],
     [ "pico:GP0", "bb1:1b.h", "", [ "$bb" ] ],
     [ "pico:GP1", "bb1:2b.h", "", [ "$bb" ] ],
     [ "pico:GND.1", "bb1:3b.h", "", [ "$bb" ] ],
@@ -248,7 +314,9 @@
     [ "btn4:2.l", "bb1:58t.d", "", [ "$bb" ] ],
     [ "btn4:1.r", "bb1:60b.i", "", [ "$bb" ] ],
     [ "btn4:2.r", "bb1:58b.i", "", [ "$bb" ] ],
-    [ "btn4:2.l", "pico:GP27", "yellow", [ "v-48", "h-470.6" ] ]
+    [ "relay3:VCC", "bb1:bp.20", "red", [ "v0" ] ],
+    [ "relay3:GND", "bb1:bn.20", "black", [ "v0" ] ],
+    [ "relay3:IN", "pico:GP9", "green", [ "h-115", "v-240" ] ]
   ],
   "dependencies": {}
 }
