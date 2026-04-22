@@ -9,7 +9,7 @@ print("Test Pompe !")
 # INIT
 bp1_allumer = Quant_Debounce_Bp(0, "bp1")
 bp2_eteindre = Quant_Debounce_Bp(1, "bp2")
-led_etat = Pin(2, Pin.OUT)
+led_etat = Pin(2, Pin.OUT) #Led verte
 relais1_pompe = Pin(6, Pin.OUT)
 
 

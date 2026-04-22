@@ -28,22 +28,22 @@ lcd.putstr("Pret...")
 
 # --- Boucle principale ---
 while True:
-    if bp1.get_state() == "bp1":
+    if bp1.get_state() == "appuyer":
         lcd.clear()
         lcd.move_to(0,0)
         lcd.putstr(msg1)
         bp1.bp = None
-    if bp2.get_state() == "bp2":
+    if bp2.get_state() == "appuyer":
         lcd.clear()
         lcd.move_to(0,1)
         lcd.putstr(msg2)
         bp2.bp = None
-    if bp3.get_state() == "bp3":
+    if bp3.get_state() == "appuyer":
         lcd.clear()
         lcd.move_to(0,0)
         lcd.putstr(msg3)
         bp3.bp = None
-    if bp4.get_state() == "bp4":
+    if bp4.get_state() == "appuyer":
         lcd.clear()
         lcd.move_to(0,1)
         lcd.putstr(msg4)

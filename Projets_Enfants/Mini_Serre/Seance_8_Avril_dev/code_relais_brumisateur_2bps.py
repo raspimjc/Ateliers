@@ -9,7 +9,7 @@ print("Test Brumisateur !")
 # INIT
 bp3_allumer = Quant_Debounce_Bp(11, "bp3")
 bp4_eteindre = Quant_Debounce_Bp(27, "bp4")
-led_etat = Pin(4, Pin.OUT)
+led_etat = Pin(4, Pin.OUT) #LED rouge
 relais2_brumisateur = Pin(7, Pin.OUT)
 
 
