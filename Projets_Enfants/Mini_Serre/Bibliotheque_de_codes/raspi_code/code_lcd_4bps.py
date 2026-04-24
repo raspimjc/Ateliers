@@ -21,7 +21,7 @@ msg4 = input("Message 4 (ligne 2) : ")
 bp1 = Quant_Debounce_Bp(0, "bp1")
 bp2 = Quant_Debounce_Bp(1, "bp2")
 bp3 = Quant_Debounce_Bp(11, "bp3")
-bp4 = Quant_Debounce_Bp(27, "bp4")
+bp4 = Quant_Debounce_Bp(10, "bp4")
 
 lcd.clear()
 lcd.putstr("Pret...")
