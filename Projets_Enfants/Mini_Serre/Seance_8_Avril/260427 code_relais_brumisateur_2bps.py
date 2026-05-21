@@ -15,7 +15,7 @@ relais2_brumisateur = Pin(7, Pin.OUT)
 
 # place les actionneur dans leur etat par defaut
 relais2_brumisateur.value(1)  # eteint le brumisateur
-led_etat.value(1)       # eteint la led
+led_etat.value(1)       # eteint la led (!! logique inversée car collecteur ouvert)
 mon_etat = "eteint"     # variable d'etat du programme
 
 # boucle principale
@@ -26,6 +26,7 @@ while True:
             relais2_brumisateur.value(0)
             time.sleep(0.05)
             relais2_brumisateur.value(1)
+            # on allume la led (!! logique inversée car collecteur ouvert)
             led_etat.value(0)
             mon_etat = "allumer"
     else:
@@ -38,7 +39,7 @@ while True:
             relais2_brumisateur.value(0)
             time.sleep(0.1)
             relais2_brumisateur.value(1)
-            
+            # on eteint la led (!! logique inversée car collecteur ouvert)
             led_etat.value(1)
             mon_etat = "eteint"
 
