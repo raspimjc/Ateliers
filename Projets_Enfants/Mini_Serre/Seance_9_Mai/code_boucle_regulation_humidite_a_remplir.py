@@ -11,9 +11,9 @@ SEUIL_HUMIDITE_HAUT=60
 
 # FONCTIONS
 def afficher_etat_humidite( etat, valeur ):
-    print(f"etat : {etat}")
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     print(f"humidite : {valeur:.1f}%")
-    
+
 def allumer_brumisateur( relais ):
     relais.value(0)
     time.sleep(0.1)
@@ -53,7 +53,6 @@ mon_etat = "attente"     # variable d'etat du programme : "humidifie" / "attente
 
 # boucle principale
 while True:
-
     # on prend la mesure
     DHT.measure()
     
@@ -76,19 +75,19 @@ while True:
             
     elif mon_etat == "humidifie":
         # on regarde si on est passe au dessus du seuil d'humidite pour arrêter le brumisateur
-        if DHT.humidity() > SEUIL_HUMIDITE_BAS:
+        if DHT.humidity() > xxxxxxxxxxxxxx:
             # on eteint le brumisateur
-            eteindre_brumisateur(relais2_brumisateur)
-            # on indique notre nouvel etat: attente
-            mon_etat = "attente"
+            eteindre_brumisateur(xxxxxxxxxxxxx)
+            # on indique notre nouvel etat
+            xxxxxxxxxxxxxxxxxxxxxx
             
-    elif mon_etat == "ventille":
+    elif xxxxxxxxxxxxxxxxxxxxxxxxx:
         # on regarde si on est passe en dessous du seuil d'humidite pour arrêter le ventilateur
-        if DHT.humidity() < SEUIL_HUMIDITE_HAUT:
+        if xxxxxxxxxxxxxxxxxxxxxxxxxx:
             # on eteint le ventilateur
-            eteindre_ventilateur(relais4_ventilateur)
-            # on indique notre nouvel etat: attente
-            mon_etat = "attente"
+            xxxxxxxxxxxxxxxxxxx
+            # on indique notre nouvel etat
+            xxxxxxxxxxxxxxxxxxxx
 
 
 

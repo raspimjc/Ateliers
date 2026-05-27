@@ -1,4 +1,5 @@
-from machine import Pin
+from machine import Pin, I2C
+from machine_i2c_lcd import I2cLcd
 import time
 import dht
 
@@ -13,6 +14,9 @@ SEUIL_HUMIDITE_HAUT=60
 def afficher_etat_humidite( etat, valeur ):
     print(f"etat : {etat}")
     print(f"humidite : {valeur:.1f}%")
+    lcd.clear()
+    lcd.putstr(f"etat : {etat} \n")
+    lcd.putstr(f"hum : {valeur:.1f}% \n")
     
 def allumer_brumisateur( relais ):
     relais.value(0)
@@ -45,6 +49,11 @@ relais2_brumisateur = Pin(7, Pin.OUT)
 #DHT = dht.DHT11(Pin(22)) 
 DHT = dht.DHT22(Pin(22)) 
 time.sleep(1) # attente que le capteur humidité soit opérationnel
+#Declaration de l'ecran LCD
+i2c = I2C(1, scl=Pin(15), sda=Pin(14), freq=400000)
+addr = i2c.scan()[0]
+print(hex(addr))
+lcd = I2cLcd(i2c, addr, 2, 16)
 
 # place les actionneurs dans leur etat par defaut
 eteindre_ventilateur(relais4_ventilateur)  # eteint le ventilateur
@@ -89,6 +98,7 @@ while True:
             eteindre_ventilateur(relais4_ventilateur)
             # on indique notre nouvel etat: attente
             mon_etat = "attente"
+
 
 
 
