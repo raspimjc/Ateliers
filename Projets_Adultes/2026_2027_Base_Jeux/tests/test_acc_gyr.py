@@ -2,14 +2,14 @@
 from machine import Pin, I2C
 import time
 from time import sleep
+from constantes import *
 
 from imu import MPU6050
 from fusion import Fusion
 
 
 #== Declaration du MPU6050
-#i2c = I2C(0, sda=Pin(20), scl=Pin(21), freq=10000)
-i2c = I2C(1, sda=Pin(14), scl=Pin(15), freq=10000)
+i2c = I2C(I2C_LCD_ID, sda=Pin(PIN_I2C1_SDA), scl=Pin(PIN_I2C1_SCL), freq=10000)
 imu = MPU6050(i2c)
 fuse = Fusion()
 
