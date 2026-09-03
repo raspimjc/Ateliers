@@ -1,17 +1,13 @@
-#Source
-#https://stm32python.gitlab.io/fr/docs/Micropython/grove/rfid ** A REGARDER **
-#https://electroniqueamateur.blogspot.com/2021/05/lecture-dun-tag-rfid-avec-module-rc522.html
-
-'''
-Lecture du numéro (UID) d'un tag RFID.
-Module RFID-RC522 et Raspberry Pi Pico
-
-Plus d'infos:
-https://electroniqueamateur.blogspot.com/2021/05/lecture-dun-tag-rfid-avec-module-rc522.html
-
-'''
-from mfrc522 import MFRC522 # https://github.com/danjperron/micropython-mfrc522
+from mfrc522 import MFRC522 
 from utime import sleep
+
+#from constantes import *
+RFID_SPI_ID = 1
+PIN_RFID_SCK = 10
+PIN_RFID_MISO = 8
+PIN_RFID_MOSI = 11
+PIN_RFID_CS = 9
+PIN_RFID_RST = 13
 
 def uidToString(uid):
     mystring = ""
@@ -19,26 +15,25 @@ def uidToString(uid):
         mystring = "%02X" % i + mystring
     return mystring
                   
-#rc522 = MFRC522(spi_id=0,sck=6,miso=4,mosi=7,cs=5,rst=3)
-rc522 = MFRC522(spi_id=1,sck=10,miso=8,mosi=11,cs=9,rst=13)
 
-print(hex(rc522._rreg(0x37)))
+#print(hex(rc522._rreg(0x37)))
 
-print("")
-print("Placez une carte RFID pres du lecteur.")
-print("")
-
-
-while True:
+#Test
+def test(rc522):
     stat, tag_type = rc522.request(rc522.REQIDL)
-
-    print("stat =", stat)
-
+    #print("stat =", stat)
     if stat == rc522.OK:
         print("Carte détectée")
         stat, uid = rc522.SelectTagSN()
-
         #if stat == rc522.OK:
         print(uid)  
         print(stat)
-
+        
+#Main    
+if __name__ == '__main__':
+    #Declaration
+    rc522 = MFRC522(spi_id=RFID_SPI_ID,sck=PIN_RFID_SCK,miso=PIN_RFID_MISO,mosi=PIN_RFID_MOSI,cs=PIN_RFID_CS,rst=PIN_RFID_RST)
+    #Test
+    print("Consigne: Placez une carte RFID pres du lecteur")
+    while True:
+        test(rc522)

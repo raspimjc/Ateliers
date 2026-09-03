@@ -1,9 +1,11 @@
 from machine import Pin
 from buzzer import Buzzer
-from time import sleep
-from constantes import *
+import time
 
-# frequences des notes
+#from constantes import *
+PIN_BUZ = 27
+
+#Variables globales
 freq_notes = {"do":1046,"do_":1109,
               "re":1175,"re_":1245,
               "mi":1318,
@@ -29,31 +31,41 @@ notes = [("mi",0.25),("mi",0.25),("mi",0.5),
          ("mi",0.25),("mi",0.25),("mi",0.5),
          ("so",0.25),("fa",0.25),("mi",0.25),("re",0.25),
          ("do",1)]
-
-# declaration du buzzer (Alimentation en 3.3V pour celui de la MJC, sinon il se bloque)
-buz = Buzzer(PIN_BUZ)
-buz.stop()
-
-# fonction qui va jouer une note
-def joue_note(val_note,time):
-    global buz
+         
+notes_short = [("mi",0.25),("mi",0.25),("mi",0.5),
+         ("mi",0.25),("mi",0.25),("mi",0.5),
+         ("mi",0.25),("so",0.25),("do",0.25),("re",0.25),
+         ("mi",1),
+         ("fa",0.25),("fa",0.25),("fa",0.5),
+         ("mi",0.25),("mi",0.25),("mi",0.5),
+         ("re",0.25),("re",0.25),("re",0.25),("mi",0.25)]
+         
+# fonction qui va jouer 1 note
+def joue_note(buz,val_note,duree):
     buz.set_freq(freq_notes[val_note])
     buz.start()
-    sleep(time)
+    time.sleep(duree)
     buz.stop()
 
-def test_buzzer():
-    for note in notes:
-        joue_note(note[0],note[1])
-        sleep(0.01) 
+#Test
+def test(buz):
+    for note in notes_short:
+        joue_note(buz,note[0],note[1])
+        time.sleep(0.01) 
     
-
+#Main    
 if __name__ == '__main__':
+    #Declaration (Alimentation en 3.3V pour celui de la MJC, sinon il se bloque)
+    buz = Buzzer(PIN_BUZ)
+    #Init
+    buz.stop()    
+    #Test
+    print("Consigne: Musique courte Jingle Bells")
     #Utilisation du try/except pour eteindre le buzzer si on stop le programme
     #Sinon le buzzer s'arrete sur un bip
     try:
         while True:
-            test_buzzer()
+            test(buz)
     except KeyboardInterrupt as e:
         buz.stop()
   

@@ -1,38 +1,38 @@
 from machine import Pin
 import time
-from constantes import *
 
-bouton = Pin(PIN_BP1, Pin.IN, Pin.PULL_UP) # BP1
-#bouton = Pin(PIN_BP2, Pin.IN, Pin.PULL_UP) # BP2
+#from constantes import *
+PIN_BP1 = 16
 
+#Variables globales
 date_dernier_appui = time.ticks_ms()
 bouton_actif = False
 
-# Fonction sera appellée lors de l'appui sur le bouton
+#Handler d'interruption
 def bouton_handler(pin):
     global bouton_actif
     global date_dernier_appui
-    # on evite les rebonds ...
+    #anti- rebonds ...
     if time.ticks_diff(time.ticks_ms(), date_dernier_appui) > 500: 
         bouton_actif = True
-        # on reinitialise la variable date_dernier_appui
+        #reinitialisation la variable date_dernier_appui
         date_dernier_appui = time.ticks_ms() 
 
-# Fonction qui associe l'appui sur le bouton a l'appel de la fonction ci dessus
-bouton.irq(trigger = machine.Pin.IRQ_RISING, handler = bouton_handler)
-
-
-def test_bouton():
+#Test
+def test():
     global bouton_actif
-    # on attends 1ms
     time.sleep(1)
-    # on regarde l'etat du bouton
     if bouton_actif:
         print("Bouton actif")
         bouton_actif = False    
 
+#Main    
 if __name__ == '__main__':
-    print("En attente d'un appui sur le BP")
+    #Declaration
+    bouton = Pin(PIN_BP1, Pin.IN, Pin.PULL_UP)
+    bouton.irq(trigger = machine.Pin.IRQ_RISING, handler = bouton_handler)
+    #Test
+    print("Consigne: En attente d'un appui sur le BP")
     while True:
-        test_bouton()
+        test()
 

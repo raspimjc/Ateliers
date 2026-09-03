@@ -1,19 +1,11 @@
 from neopixel import Neopixel
 import time
-from constantes import *
 
-# declaration du ruban de leds 
-NUM_LED = 8 #Nbre de leds
-neo = Neopixel(NUM_LED, 0, PIN_NEO, "GRB")
+#from constantes import *
+PIN_NEOPIXEL = 13
 
-# on definit la luminosite des leds / 255
-neo.brightness(15)
-# on eteint toute les leds
-neo.clear()
-# on affiche
-neo.show()
-
-def test_neopixel(leds):
+#Test
+def test(leds):
     # on allume toutes les leds du sapin en rouge
     leds.fill((255,0,0))
     leds.show()
@@ -27,7 +19,16 @@ def test_neopixel(leds):
     leds.show()
     time.sleep(1)    
 
+#Main    
 if __name__ == '__main__':
+    #Declaration
+    neo = Neopixel(8, 0, PIN_NEOPIXEL, "GRB")
+    #Init
+    neo.brightness(15)
+    neo.clear()
+    neo.show()
+    #Test
+    print("Consigne: Le ruban va s'allumer en differentes couleurs")
     while True:
-        test_neopixel(neo)
+        test(neo)
 

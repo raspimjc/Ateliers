@@ -1,16 +1,17 @@
 """ILI9341 demo (bouncing boxes)."""
-from machine import Pin, SPI  # type: ignore
+from machine import Pin, SPI  
 from random import random, seed
-from ili9341_2 import Display, color565
-from utime import sleep_us, ticks_cpu, ticks_us, ticks_diff  # type: ignore
+from ili9341 import Display, color565
+from utime import sleep_us, ticks_cpu, ticks_us, ticks_diff 
+import time
 
-DEF_SPI_ID = 0
-
-DEF_TFT_SCK = 2
-DEF_TFT_MOSI = 3
-DEF_TFT_DC = 1
-DEF_TFT_CS = 5
-DEF_TFT_RST = 0
+#from constantes import *
+TFT_SPI_ID = 0
+PIN_TFT_SCK = 2
+PIN_TFT_MOSI = 3
+PIN_TFT_DC = 1
+PIN_TFT_CS = 5
+PIN_TFT_RST = 0
 
 class Box(object):
     """Bouncing box."""
@@ -82,17 +83,10 @@ class Box(object):
                                 size, size, self.color)
 
 
-def test():
+def test(display, time_debut, timeout):
     """Bouncing box."""
     try:
-        # Baud rate of 40000000 seems about the max
-        #spi = SPI(1, baudrate=40000000, sck=Pin(14), mosi=Pin(13))
-        #display = Display(spi, dc=Pin(4), cs=Pin(16), rst=Pin(17))
-        spi = SPI(DEF_SPI_ID, baudrate=10000000, sck=Pin(DEF_TFT_SCK), mosi=Pin(DEF_TFT_MOSI))
-        display = Display(spi, dc=Pin(DEF_TFT_DC), cs=Pin(DEF_TFT_CS), rst=Pin(DEF_TFT_RST), width=320, height=240, rotation=0)
- 
         display.clear()
-
         colors = [color565(255, 0, 0),
                   color565(0, 255, 0),
                   color565(0, 0, 255),
@@ -103,7 +97,7 @@ def test():
         boxes = [Box(display.width, display.height, sizes[i], display,
                  colors[i]) for i in range(6)]
 
-        while True:
+        while time.ticks_diff(time.ticks_ms(), time_debut) < timeout * 1000:
             timer = ticks_us()
             for b in boxes:
                 b.update_pos()
@@ -116,5 +110,8 @@ def test():
     except KeyboardInterrupt:
         display.cleanup()
 
-
-test()
+if __name__ == '__main__':
+    spi = SPI(TFT_SPI_ID, baudrate=10000000, sck=Pin(PIN_TFT_SCK), mosi=Pin(PIN_TFT_MOSI))
+    display = Display(spi, dc=Pin(PIN_TFT_DC), cs=Pin(PIN_TFT_CS), rst=Pin(PIN_TFT_RST), width=320, height=240, rotation=0)
+    debut = time.ticks_ms()
+    test(display,debut,5)

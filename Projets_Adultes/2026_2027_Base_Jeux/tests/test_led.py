@@ -1,19 +1,21 @@
-import time
 from machine import Pin
-from constantes import *
+import time
 
-#LED = Pin("LED", Pin.OUT) # LED integree a la board 
-#LED = Pin(25, Pin.OUT) # LED integree a la board pour le pico (sauf wifi)
-LED = Pin(PIN_LED1, Pin.OUT) # LED 1 Mini Serre
-#LED = Pin(PIN_LED2, Pin.OUT) # LED 2 Mini Serre
-#LED = Pin(PIN_LED3, Pin.OUT) # LED 3 Mini Serre
-#LED = Pin(PIN_LED4, Pin.OUT) # LED 4 Mini Serre
+#from constantes import *
+PIN_LED1 = 6
 
-def test_led(led):
-    led.toggle()
+#Test
+def test(led):
+    led.value(1)
     time.sleep(0.5)
-    
+    led.value(0)
+    time.sleep(0.5)
 
+#Main    
 if __name__ == '__main__':
-    while True:
-        test_led(LED)
+    #Declaration    
+    LED = Pin(PIN_LED1, Pin.OUT)
+    #Test    
+    print("Consigne: La LED va clignoter")
+    while True:        
+        test(LED)
