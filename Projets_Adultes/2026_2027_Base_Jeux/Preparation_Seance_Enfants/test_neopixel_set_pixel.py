@@ -23,10 +23,12 @@ while True:
     for i in range (0,NUM_LED):
         leds.set_pixel(i,couleur_bleu)
         leds.show()
+        time.sleep(1)
     time.sleep(1)
     # on allume tour a tour  les leds en vert
     for i in range (0,NUM_LED):
         leds.set_pixel(i,couleur_vert)
         leds.show()
+        time.sleep(1)
     time.sleep(1)
     #leds.clear()

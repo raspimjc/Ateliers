@@ -8,8 +8,8 @@ NUM_LED = 2
 leds = Neopixel(NUM_LED, 0, 13, "GRB")
 
 boutons = [
-    Pin(16, Pin.IN, Pin.PULL_UP), #bouton sous la led rouge
-    Pin(17, Pin.IN, Pin.PULL_UP) #bouton sous la led verte
+    Pin(18, Pin.IN, Pin.PULL_UP), #fil noir = LED#0
+    Pin(19, Pin.IN, Pin.PULL_UP)  #fil vert = LED#1
 ]
 
 # declaration de quelques couleurs 
@@ -40,7 +40,7 @@ def attendre_bouton():
     while True:
         for i, bouton in enumerate(boutons):
             if bouton.value() == 0:  # appui
-                leds.set_pixel(index,couleur_bleu)
+                leds.set_pixel(i,couleur_bleu)
                 leds.show()
                 while bouton.value() == 0:
                     pass

@@ -16,8 +16,8 @@ NUM_LED = 2
 leds = Neopixel(NUM_LED, 0, 13, "GRB")
 
 boutons = [
-    Pin(16, Pin.IN, Pin.PULL_UP),   # bouton rouge
-    Pin(17, Pin.IN, Pin.PULL_UP)    # bouton vert
+    Pin(18, Pin.IN, Pin.PULL_UP), #fil noir = LED#0
+    Pin(19, Pin.IN, Pin.PULL_UP)  #fil vert = LED#1
 ]
 
 # declaration de quelques couleurs 
