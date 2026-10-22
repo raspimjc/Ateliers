@@ -19,7 +19,7 @@ def bouton_handler(pin):
         date_dernier_appui = time.ticks_ms() 
 
 # Fonction qui associe l'appui sur le bouton a l'appel de la fonction ci dessus
-bouton.irq(trigger = machine.Pin.IRQ_RISING, handler = bouton_handler)
+bouton.irq(trigger = machine.Pin.IRQ_FALLING, handler = bouton_handler)
 
 
 def test_bouton():
