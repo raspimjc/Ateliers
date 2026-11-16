@@ -1,0 +1,185 @@
+(footprint "RFID"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "09403946-e770-4011-85d6-42094f288933")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "RFID"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "996d6ba7-918f-4349-ab89-66c0aa1ebde8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "731f2025-33b2-4571-8fb8-43becb56a0cf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b3b0b18-3f6d-4b47-9437-7b9fda1bca2f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -16.5 -20.5)
+		(end 50.7 19.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "17081386-e647-4c49-9fc3-92ea46b9422c")
+	)
+	(fp_text user "TFT"
+		(at -4.5 -9.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "5e9e6408-f98c-40f7-826b-4693b8446c88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7a86d8b0-0e9a-4dc2-8f1d-0f4a5f8211e0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(point
+		(at -15.24 -12.7)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "6b688578-e52a-43a5-b19f-b2b2fbbc469a")
+	)
+	(point
+		(at -15.24 -10.16)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "ae7378de-eb3b-4c00-9c6d-29524a1584a4")
+	)
+	(point
+		(at -15.24 -7.62)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "667f6d45-c324-4a8e-9d33-97a025d3c8c6")
+	)
+	(point
+		(at -15.24 -5.08)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "d2ead40a-9023-4672-ac11-f9a6960846ed")
+	)
+	(point
+		(at -15.24 -2.54)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "d293a7c3-d08d-439a-b8b2-58907878b9e0")
+	)
+	(point
+		(at -15.24 0)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "e7196e1e-2962-49ce-97ef-b1940e98b66f")
+	)
+	(point
+		(at -15.24 2.54)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "ca02efe9-4933-44e9-866b-8e4ccb23a32a")
+	)
+	(point
+		(at -15.24 5.08)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "b97fbc74-8621-4930-ab8a-ec344b079821")
+	)
+	(point
+		(at -15.24 7.62)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "a78e4027-6576-444a-94a2-913df5c8a57a")
+	)
+	(point
+		(at 48.26 -5.08)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "c34bb323-c289-4161-9b5e-a9ac31afc5f7")
+	)
+	(point
+		(at 48.26 -2.54)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "f9deed18-9fc7-4b75-97d7-36a94a531755")
+	)
+	(point
+		(at 48.26 0)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "402f68bf-33fa-4ca8-94cd-cd7e5bcd5903")
+	)
+	(point
+		(at 48.26 0)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "f3d08834-cee9-4352-8b95-dedb501d7007")
+	)
+	(point
+		(at 48.26 2.54)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "ff9fac2c-7975-4d23-8144-dec448653df1")
+	)
+	(point
+		(at 48.26 5.08)
+		(size 1)
+		(layer "F.SilkS")
+		(uuid "6d1e589e-cab3-4a15-ac4f-167f6f777396")
+	)
+	(embedded_fonts no)
+)

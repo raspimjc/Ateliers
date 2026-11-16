@@ -1,0 +1,112 @@
+(footprint "electret ampli"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "cc6aca79-66e9-4e9f-b591-e34b6c1273fe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "electret ampli"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d260a31a-4a19-4a37-9321-63075401ed75")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2379f4fa-a0f2-4f7f-a1fc-9eaed84dcfa6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "142188e0-2e44-4ac5-9317-b487d1b9b2c8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start 0 0)
+		(end 14 26)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(fill no)
+		(layer "In1.Cu")
+		(uuid "701444ac-1447-4c9e-a547-ceeae55362e4")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b471b858-7af7-462a-9d45-521d1e7b52b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(point
+		(at 2.54 25.4)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "4d837955-be35-4049-b81c-a2df61c6164d")
+	)
+	(point
+		(at 5.08 25.4)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "c05ae803-5874-499e-bc24-a4bcd7b910b6")
+	)
+	(point
+		(at 7.62 25.4)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "d11aa1d9-a754-4a16-8aef-ef456015c6ef")
+	)
+	(point
+		(at 10.16 25.4)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "61802420-3216-4436-a929-c6801827b264")
+	)
+	(point
+		(at 12.7 25.4)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "802d44a4-f6e2-474c-9a66-b701889e572d")
+	)
+	(embedded_fonts no)
+)
