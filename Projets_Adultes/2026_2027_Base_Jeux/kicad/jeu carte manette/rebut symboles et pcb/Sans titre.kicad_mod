@@ -1,0 +1,136 @@
+(footprint "Sans titre"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2fdbcf40-c5c4-4869-90fb-f0a4b7b29f48")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Sans titre"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "44ad735c-1f84-46d6-bfa9-c4e2439ca811")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6401b3eb-97b5-4e8c-903a-88a5c79f84f8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "90a2f3c6-9f70-40fe-9f03-b74e435ffb31")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -10.5 -8)
+		(end 8.5 9)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(fill no)
+		(layer "In1.Cu")
+		(uuid "f0551f18-4d5b-415c-9e7c-300a50316cbd")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f0dbe153-41e6-4a5d-a3c8-12b0df3ea99d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(point
+		(at -7.62 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "be282f7a-e749-45f3-8562-1ca54cfca7da")
+	)
+	(point
+		(at -7.62 9)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "15f5ca37-72be-4f17-88c8-5f79ab963f52")
+	)
+	(point
+		(at -7.62 9)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "8ca767da-c4d2-46d6-8653-6006ae8ae5b0")
+	)
+	(point
+		(at -5.08 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "a4fa205d-383d-497a-96a0-d0072af19612")
+	)
+	(point
+		(at -2.54 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "a371523a-99f0-4287-8c09-56bc8a0b6b80")
+	)
+	(point
+		(at 0 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "e6d31387-db04-4879-8243-4bcf6fb27872")
+	)
+	(point
+		(at 2.54 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "4f124093-17ec-4f9c-a4f8-7147dccb7774")
+	)
+	(point
+		(at 5.08 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "4d4c97ca-cf02-4b33-99c0-4aa8ebdd2dc5")
+	)
+	(point
+		(at 7.62 7.62)
+		(size 1)
+		(layer "In1.Cu")
+		(uuid "3b0805cd-d259-4959-8d73-fe0f6990843d")
+	)
+	(embedded_fonts no)
+)

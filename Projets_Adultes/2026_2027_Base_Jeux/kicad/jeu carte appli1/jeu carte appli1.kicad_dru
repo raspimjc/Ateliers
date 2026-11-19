@@ -1,0 +1,13 @@
+(version 1)
+(rule "Minimum connection width 1"
+	(constraint connection_width (min 0.5mm))
+)
+(rule "Copper to hole clearance 1"
+	(constraint hole_clearance (min 0.5mm))
+)
+(rule "Vias under SMD 1"
+	(constraint disallow via)
+	(condition "A.Pad_Type == 'SMD'")
+)
+(rule "Custom rule 1"
+   (constraint clearance (min 0.2mm)))
